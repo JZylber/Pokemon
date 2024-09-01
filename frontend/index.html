@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://fonts.googleapis.com/css2?family=Material+Symbols+Outlined:opsz,wght,FILL,GRAD@20..48,100..700,0..1,-50..200"
+    />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Rubik:ital,wght@0,300..900;1,300..900&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="style.css" />
+    <title>Pokédex</title>
+  </head>
+  <body>
+    <header>
+      <h1 class="rubik-bold">Pokédex</h1>
+    </header>
+    <main>
+      <a href="manija.html" class="rubik-bold button">
+        <span class="material-symbols-outlined"> link </span>
+        <span>consigna manija</span></a
+      >
+      <form class="rubik-regular">
+        <div class="category">
+          <label for="type">Tipo:</label>
+          <select name="type" id="type" class="rubik-regular">
+            <option value="all">todos</option>
+            <option value="grass">grass</option>
+            <option value="poison">poison</option>
+            <option value="fire">fire</option>
+            <option value="flying">flying</option>
+            <option value="dragon">dragon</option>
+            <option value="water">water</option>
+            <option value="bug">bug</option>
+            <option value="normal">normal</option>
+            <option value="electric">electric</option>
+            <option value="ground">ground</option>
+            <option value="fairy">fairy</option>
+            <option value="fighting">fighting</option>
+            <option value="psychic">psychic</option>
+            <option value="rock">rock</option>
+            <option value="steel">steel</option>
+            <option value="ice">ice</option>
+            <option value="ghost">ghost</option>
+            <option value="dark">dark</option>
+          </select>
+        </div>
+        <div class="category">
+          <label for="generation">Generación:</label>
+          <select name="generation" id="generation" class="rubik-regular">
+            <option value="all">todas</option>
+            <option value="1">1</option>
+            <option value="2">2</option>
+            <option value="3">3</option>
+            <option value="4">4</option>
+            <option value="5">5</option>
+            <option value="6">6</option>
+          </select>
+        </div>
+        <div class="category">
+          <label for="legendary">Incluir legendarios</label>
+          <input type="checkbox" name="legendary" id="legendary" />
+        </div>
+      </form>
+      <table>
+        <thead class="rubik-bold">
+          <tr>
+            <th>#</th>
+            <th>Nombre</th>
+            <th>Tipo</th>
+            <th>HP</th>
+            <th>Ataque</th>
+            <th>Defensa</th>
+            <th>Ataque Esp.</th>
+            <th>Defensa Esp.</th>
+            <th>Velocidad</th>
+            <th>Generación</th>
+            <th>Legendario</th>
+            <th>Capturado</th>
+          </tr>
+        </thead>
+        <tbody id="pokemon" class="rubik-regular"></tbody>
+      </table>
+    </main>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/4.7.4/socket.io.js"></script>
+    <script src="socket.js"></script>
+    <script src="main.js"></script>
+  </body>
+</html>
